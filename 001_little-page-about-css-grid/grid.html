@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All CSS Grid Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Lora:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Lora:wght@600&family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .flex-container {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #DDF2FD;
+            
+        }
+        .grid-container {
+            display: grid;
+            width: 60vw;
+            text-align: justify;
+            background-color: #9BBEC8;
+            border-radius: 10px;
+            border: 1px solid #164863;
+            box-shadow: 5px 0px 40px #164863,-5px 0px 40px #164863;
+            font-size: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding: 0em 2em 1em 2em;
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 3.5em;
+            color: #164863;
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        strong {
+            font-size: 1.2em;
+            color: #164863;
+        }
+        .notes {
+            border: 0px solid #164863;
+            margin: 1em;
+            padding: 1em 1.5em;
+            border-radius: 10px;
+            background-color: #DDF2FD;
+            color: black;
+            box-shadow: inset 3px 3px 10px #164863,inset -1.5px -1.5px 5px #164863;
+            width: fit-content;
+            font-size: 1em;
+            line-height: 1.5em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="grid-container">
+            <h1>All CSS Grid Properties</h1>
+            <ul>
+                <li>
+                    <strong>column-gap</strong> - Specifies the gap between the columns
+                    <div class="notes">Свойство определяет размер зазора только между колонками.</div>
+                </li>
+                <li>
+                    <strong>gap</strong> - A shorthand property for the <b>row-gap</b> and the <b>column-gap</b> properties
+                    <div class="notes"><p>Эта краткая запись позволяет определить размер зазора как между колонками, так и между строками.</p>
+                        <p>Возможны два варианта записи.</p> <p>Первый заключается в том, что бы указать один размер и этот размер будет использоваться
+                        для определения зазора и между колонками, и между строками.</p> <p>Второй вариант заключается в том, что бы указать два размера.
+                        При этом первый размер будет определять размер зазора между строками, а второй - между колонками.</p> Значения отделены
+                        друг от друга пробелом, а не запятой.</div>
+                </li>
+                <li>
+                    <strong>grid</strong> - A shorthand property for the <b>grid-template-rows</b>, <b>grid-template-columns</b>, <b>grid-template-areas</b>, <b>grid-auto-rows</b>, <b>grid-auto-columns</b>, and the <b>grid-auto-flow</b> properties
+                    <div class="notes">Я затрудняюсь описать функционал данного свойства.</div>
+                </li>
+                <li>
+                    <strong>grid-area</strong> - Either specifies a name for the grid item, or this property is a shorthand property for the <b>grid-row-start</b>, <b>grid-column-start</b>, <b>grid-row-end</b>, and <b>grid-column-end</b> properties
+                    <div class="notes">Свойство может использоваться в двух разных способах.<br /> 
+                        Первый - оно может определять название грид айтема. Речь идет о каком то разделе на странице.
+                        Например, хэдер, футер, главная часть, боковая панель и т.д.<br />
+                        Второй вариант использование этого свойства - это краткая запись для свойств: the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties.<br />
+                        Эти свойства записываются через слэш в порядке, указаном выше.</div>
+                </li>
+                <li>
+                    <strong>grid-auto-columns</strong> - Specifies a default column size
+                    <div class="notes">Не уверен, что полностью понимаю это.
+                        Данное свойство устанавливает ширину по-умолчанию для колонок.</div>
+                </li>
+                <li>
+                    <strong>grid-auto-flow</strong> - Specifies how auto-placed items are inserted in the grid
+                    <div class="notes">Свойство определяет в каком порядке будут добавляться новые айтемы в контейнер.
+                        Свойство может принимать следующие значения: row, column, dense, row dense, column dense<br />
+                        row - новые айтемы буду добавляться слева направо<br />
+                        column - новые айтемы будут добавляться сверху вниз<br />
+                        dense - я затрудняюсь описать действие данного значения.<br /> 
+                        row dense - я затрудняюсь описать действие данного значения.<br />
+                        column dense - я затрудняюсь описать действие данного значения.<br /></div>
+                </li>
+                <li>
+                    <strong>grid-auto-rows</strong> - Specifies a default row size
+                    <div class="notes">Не уверен, что полностью понимаю это.
+                        Cвойство устанавливает высоту по-умолчанию для строк.</div>
+                </li>
+                <li>
+                    <strong>grid-column</strong> - A shorthand property for the <b>grid-column-start</b> and the <b>grid-column-end</b> properties
+                    <div class="notes">Cвойство является краткой формой записи определяющей с какой колонки начинается и на какой колонке заканчивается 
+                        определяемый грит айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-column-end</strong> - Specifies where to end the grid item
+                    <div class="notes">Cвойство определяет колонку на которой должен закончится определяемый грид айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-column-gap</strong> - Specifies the size of the gap between columns
+                    <div class="notes">Насколько я понял, это старое свойство. В настоящий момент его заменяет свойство
+                        column-gap. 
+                        Cвойство определяет размер зазора между колонками.</div>
+                </li>
+                <li>
+                    <strong>grid-column-start</strong> - Specifies where to start the grid item
+                    <div class="notes">Cвойство определяет колонку с которой должен начаться определяемый грид айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-gap</strong> - A shorthand property for the <b>grid-row-gap</b> and <b>grid-column-gap</b> properties
+                    <div class="notes">Cтарое свойство. В настоящий момент его заменяет свойство gap. 
+                        Cвойство позволяет определить размер зазора как между колонками, так и между строками.</div>
+                </li>
+                <li>
+                    <strong>grid-row</strong> - A shorthand property for the <b>grid-row-start</b> and the <b>grid-row-end</b> properties
+                    <div class="notes">Cвойство является краткой формой записи. Оно определяет с какой строки должен начаться и на какой строке должен закончится определяемый грид айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-row-end</strong> - Specifies where to end the grid item
+                    <div class="notes">Cвойство определяет на какой строке должен закончится определяемый грид айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-row-gap</strong> - Specifies the size of the gap between rows
+                    <div class="notes">Cтарое свойство. В настоящий момент его заменяет свойство
+                        row-gap. 
+                        Cвойство определяет размер зазора между строками.</div>
+                </li>
+                <li>
+                    <strong>grid-row-start</strong> - Specifies where to start the grid item
+                    <div class="notes">Cвойство определяет с какой строки должен начаться определяемый грид айтем.</div>
+                </li>
+                <li>
+                    <strong>grid-template</strong> - A shorthand property for the <b>grid-template-rows</b>, <b>grid-template-columns</b> and <b>grid-areas</b> properties
+                    <div class="notes">Неполное описание.
+                        Cвойство является краткой записью сразу двух других свойств: grid-template-rows, grid-template-columns.
+                        Сначала через пробел указываются все значения строк, а затем ставится слэш и так же через пробел указываются
+                        все значения колонок.
+                        grid-areas properties - не разбирался</div>
+                </li>
+                <li>
+                    <strong>grid-template-areas</strong> - Specifies how to display columns and rows, using named grid items
+                    <div class="notes">Я затрудняюсь описать функционал данного свойства.</div>
+                </li>
+                <li>
+                    <strong>grid-template-columns</strong> - Specifies the size of the columns, and how many columns in a grid layout
+                    <div class="notes">Cвойство указывает количество и ширину колонок в grid layout.
+                        Значения отделены друг от друга пробелами, каждое значение указывает ширину соответствующей колонки. </div>
+                </li>
+                <li>
+                    <strong>grid-template-rows</strong> - Specifies the size of the rows in a grid layout
+                    <div class="notes">Cвойство указывает количество и высоту строк в grid layout.
+                        Значения отделены друг от друга пробелами, каждое значение указывает высоту соответствующей строки.</div>
+                </li>
+                <li>
+                    <strong>row-gap</strong> - Specifies the gap between the grid rows
+                    <div class="notes">Cвойство определяет размер зазора между строками.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
